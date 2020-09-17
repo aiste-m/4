@@ -31,10 +31,7 @@ namespace AutoTestavimas4
         [TestCase("Texas", "Florida", "Ohio", "Texas", TestName = "Testing with 3 states")]
        
         public static void TestSelectThreeStatesFromMultipleDropDownByText(string state1, string state2, string state3, string state)
-        {
-            state1 = "Texas";
-            state2 = "Florida";
-            state3 = "Ohio";
+        {           
             _page.SelectThreeStatesFromMultipleDropDownByText(state1, state2, state3).ClickFirstSelectedButton().CheckStateResultText(state);
         }
 
